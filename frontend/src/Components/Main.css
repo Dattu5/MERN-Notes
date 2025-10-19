@@ -1,0 +1,154 @@
+ #navbar {
+  background-color: #1e3a8a; 
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff9c4; 
+}
+
+
+ 
+
+#container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+ #main1 {
+  background-color: #f0f8ff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+#main1 h4 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+ #main1 input[type="text"],
+#main1 textarea,
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#main1 textarea,
+textarea {
+  resize: vertical;
+}
+
+ button {
+  padding: 10px 20px;
+  background-color: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3749b0;
+}
+
+ h3 {
+  color: #1e3a8a;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+ #container > div > div input[type="text"],
+#container > div > div textarea {
+  margin-bottom: 10px;
+}
+
+ #container > div > div {
+  background-color: #fff9c4; 
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+ .note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ .note-item button {
+  background-color: #e53935;
+}
+
+.note-item button:hover {
+  background-color: #d32f2f;
+}
+#update{
+ background-color: #f0f8ff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+
+}
+#display{
+    background-color: #f0f8ff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+
+}
+ @media (max-width: 600px) {
+  #container {
+    width: 95%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .note-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .note-item button {
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+   #navbar {
+    padding: 12px 20px;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+}
