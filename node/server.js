@@ -9,6 +9,7 @@ app.use(express.json());
 
 
 
+const PORT = process.env.PORT || 5000;
 
 
 
@@ -97,8 +98,7 @@ let data=await users.updateOne({title:otitle},{$set:{ title: ntitle, note: nnote
 
 
 
-const PORT = 5000;
-app.listen(PORT, async () => {
+ app.listen(PORT, async () => {
   await connectDB();
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
