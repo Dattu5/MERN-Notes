@@ -5,16 +5,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
-///////////////
-
-const mongoose = require('mongoose');
-require('dotenv').config();
-
-const uri = process.env.MONGO_URI;
-
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB connected ✅"))
-  .catch(err => console.error("MongoDB connection error ❌", err));
+ 
 
 
 
@@ -22,10 +13,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 
-
-
-///////////////
-const url = 'mongodb://localhost:27017';
+ const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 let users; // ✅ declare here
 
