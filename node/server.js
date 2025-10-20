@@ -15,8 +15,14 @@ const PORT = process.env.PORT || 5000;
 
 
  const url = 'mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@cluster0.ixnbsd0.mongodb.net/datta?retryWrites=true&w=majority&appName=Cluster0';
-const client = new MongoClient(url);
-let users; // ✅ declare here
+ let users; // ✅ declare here
+
+const client = new MongoClient(url, {
+  tls: true,
+  tlsAllowInvalidCertificates: true // ONLY for practice!
+});
+
+
 
 async function connectDB() {
   await client.connect();
