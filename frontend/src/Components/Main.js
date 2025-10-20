@@ -16,7 +16,7 @@ const [tosetarea, settosetarea] = useState('')
 
 
 async function add(){
-const res= await fetch("http://localhost:5000/add",{
+const res= await fetch("https://mern-notes-2-zg2i.onrender.com/add",{
 method:"POST",
 headers:{"content-type":"application/json"},
 body:JSON.stringify({first,first1}),
@@ -35,7 +35,7 @@ alert(data.text)
  }
 
  async function api(){
-let promise= await fetch("http://localhost:5000/get");
+let promise= await fetch("https://mern-notes-2-zg2i.onrender.com/get");
 let data=await promise.json();
  setitem(data)
  }
@@ -45,7 +45,7 @@ let data=await promise.json();
  
 
 async function remove(id){
-const res= await fetch("http://localhost:5000/remove",{
+const res= await fetch("https://mern-notes-2-zg2i.onrender.com/remove",{
 method:"DELETE",
 headers:{"content-type":"application/json"},
 body:JSON.stringify({id}),
@@ -63,7 +63,7 @@ if (data.success){
 
  async function find(){
   
- const res= await fetch("http://localhost:5000/getupdate",{
+ const res= await fetch("https://mern-notes-2-zg2i.onrender.com/getupdate",{
 method:"POST",
 headers:{"content-type":"application/json"},
 body:JSON.stringify({update}),
@@ -90,7 +90,7 @@ if (data.success === false || data.data.length === 0) {
 
 
 async function edit() {
-   const res = await fetch("http://localhost:5000/update", {
+   const res = await fetch("https://mern-notes-2-zg2i.onrender.com/update", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ update,tosetarea,tosetinput }),
