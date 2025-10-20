@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 
- const url = 'mongodb://localhost:27017';
+ const url = 'mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@cluster0.ixnbsd0.mongodb.net/datta?retryWrites=true&w=majority&appName=Cluster0';
 const client = new MongoClient(url);
 let users; // ✅ declare here
 
