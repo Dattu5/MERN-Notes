@@ -1,5 +1,6 @@
- #navbar {
-  background-color: #1e3a8a; 
+ /* ===== Navbar ===== */
+#navbar {
+  background-color: #1e3a8a;
   padding: 15px 25px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -11,12 +12,10 @@
 .nav-logo {
   font-size: 24px;
   font-weight: bold;
-  color: #fff9c4; 
+  color: #fff9c4;
 }
 
-
- 
-
+/* ===== Container ===== */
 #container {
   width: 90%;
   max-width: 900px;
@@ -25,7 +24,8 @@
   color: #333;
 }
 
- #main1 {
+/* ===== Add Notes Section ===== */
+#main1 {
   background-color: #f0f8ff;
   padding: 20px 25px;
   border-radius: 12px;
@@ -38,10 +38,8 @@
   color: #1e3a8a;
 }
 
- #main1 input[type="text"],
-#main1 textarea,
-input[type="text"],
-textarea {
+#main1 input[type="text"],
+#main1 textarea {
   width: 100%;
   padding: 10px 12px;
   margin-bottom: 15px;
@@ -49,14 +47,11 @@ textarea {
   border: 1px solid #ccc;
   font-size: 16px;
   box-sizing: border-box;
-}
-
-#main1 textarea,
-textarea {
   resize: vertical;
 }
 
- button {
+/* ===== Buttons ===== */
+button {
   padding: 10px 20px;
   background-color: #1e3a8a;
   color: #fff;
@@ -71,7 +66,8 @@ button:hover {
   background-color: #3749b0;
 }
 
- h3 {
+/* ===== Headings ===== */
+h3 {
   color: #1e3a8a;
   margin-top: 40px;
   margin-bottom: 15px;
@@ -79,60 +75,69 @@ button:hover {
   padding-bottom: 5px;
 }
 
- #container > div > div input[type="text"],
-#container > div > div textarea {
-  margin-bottom: 10px;
-}
-
- #container > div > div {
-  background-color: #fff9c4; 
-  padding: 15px 20px;
+/* ===== Update Section ===== */
+#update {
+  background-color: #f0f8ff;
+  padding: 20px 25px;
   border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
- .note-item {
+/* ===== Display Section ===== */
+#display {
+  background-color: #f0f8ff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Each note displayed */
+.note-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #f0f8ff;
   padding: 10px 15px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
- .note-item button {
+/* Title text */
+.note-item p {
+  flex: 1;
+  margin: 0;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* Remove button */
+.note-item button {
   background-color: #e53935;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s;
 }
 
 .note-item button:hover {
-  background-color: #d32f2f;
+  background-color: #c62828;
 }
-#update{
- background-color: #f0f8ff;
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
 
-}
-#display{
-    background-color: #f0f8ff;
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-
-}
- @media (max-width: 600px) {
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
   #container {
     width: 95%;
   }
 
   button {
     width: 100%;
+    margin-top: 10px;
   }
 
   .note-item {
@@ -141,14 +146,19 @@ button:hover {
   }
 
   .note-item button {
-    margin-top: 8px;
     align-self: flex-end;
+    margin-top: 8px;
   }
-   #navbar {
+
+  #navbar {
     padding: 12px 20px;
   }
 
   .nav-logo {
     font-size: 20px;
+  }
+
+  #display button {
+    margin-left: 0;
   }
 }

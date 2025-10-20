@@ -143,15 +143,16 @@ if(data.success){
  
  
  
- <div id='display'> 
-    <h3>display the database</h3> 
-    {item && item.map((value) => (
-      <div style={{display:'flex',width:'100px'}} >
-  <p key={value._id}>{value.title}</p> 
-  <button  onClick={()=>remove(value._id)}>remove</button>  </div>
-))}
+ <div id='display'>
+  <h3>Display the database</h3>
+  {item && item.map((value) => (
+    <div className="note-item" key={value._id}>
+      <p>{value.title}</p>
+      <button onClick={() => remove(value._id)}>Remove</button>
+    </div>
+  ))}
+</div>
 
- </div>
 
     </div>
     </>
